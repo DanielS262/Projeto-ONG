@@ -40,4 +40,7 @@
 <p>- Na Home: usar cards com as funcionalidades dos botões e imagens ilustrativas</p>
 <p>- Demais telas: menu lateral fixo com botões necessários para a funcionidade</p>
 <p>- Página de configurações: pesquisar métodos de acessibilidade
-<p>paleta de cores - rgba(22,107,138), rgba(255,255,255)
+<p>- paleta de cores  rgba(22,107,138), rgba(255,255,255)
+<p>-Menu lateral: decidir disponibilidade dos icones
+<p>-geral: definir font-family 
+<p>-Pensar na responsividade
