@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +29,7 @@ header {
 }
 
 .nav-bar :nth-child(2) :nth-child(1) {
-    margin-right: 10px
+    margin-right: 2.5vw;
 }
 
 .nav-bar :nth-child(3) :nth-child(1) {
@@ -36,5 +37,17 @@ header {
 }
 
 .nav-bar img {
-    width: 25px
+    width: 30px
+}
+
+.img-user {
+    height: 100px;
+    width: 200px
+}
+
+p,
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
 }
