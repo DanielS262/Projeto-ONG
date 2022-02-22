@@ -6,12 +6,13 @@
 }
 
 header {
-    height: 10vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky
 }
 
 .nav-bar {
@@ -36,13 +37,17 @@ header {
     margin-right: 100%
 }
 
-.nav-bar img {
-    width: 30px
+.img-user {
+    width: 50px;
 }
 
-.img-user {
-    height: 100px;
-    width: 200px
+.logo {
+    width: 150px
+}
+
+.img-gear,
+.img-logout {
+    width: 30px;
 }
 
 p,
@@ -50,4 +55,9 @@ h2 {
     font-size: 24px;
     font-weight: normal;
     font-family: 'Open Sans', sans-serif;
+}
+
+.img-gear:hover,
+.img-logout:hover {
+    cursor: pointer;
 }

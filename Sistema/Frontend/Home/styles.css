@@ -1,4 +1,9 @@
-@import url('../Global/global.css');
+@import url('../Global/globalHeader.css');
+a {
+    text-decoration: none;
+    color: black;
+}
+
 section {
     display: flex;
     align-self: center;
@@ -19,6 +24,7 @@ section {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .uppercards {
@@ -54,4 +60,18 @@ section {
     background-color: #e5e5e5;
     text-align: center;
     box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.582);
+}
+
+.lower-cards :hover {
+    box-shadow: none;
+    background-color: gray;
+    padding: auto;
+    cursor: pointer;
+}
+
+.uppercards :hover {
+    box-shadow: none;
+    background-color: gray;
+    padding: auto;
+    cursor: pointer;
 }
