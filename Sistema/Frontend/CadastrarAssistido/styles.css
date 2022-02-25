@@ -1,7 +1,7 @@
 @import url("../Global/globalHeaderMenu.css");
 section {
     width: 100vw;
-    height: 100vh;
+    height: 89vh;
 }
 
 .fstimg,
@@ -18,7 +18,7 @@ section {
 }
 
 .card {
-    width: 70%;
+    width: 80%;
     height: 70%;
     display: flex;
     justify-content: center;
@@ -27,14 +27,14 @@ section {
 }
 
 .Assiscard {
-    width: 70%;
+    width: 100%;
     height: 100%;
     border-right: 1px solid black;
 }
 
 .Famcard {
-    width: 70%;
-    height: 70%
+    width: 100%;
+    height: 100%
 }
 
 .sexstyle {
@@ -47,7 +47,7 @@ section {
 }
 
 .Sex {
-    height: 20%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@ section {
 }
 
 .formAssis {
-    height: 70%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,19 +76,19 @@ section {
 
 .inputs {
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
-    align-content: space-between;
+    align-content: space-evenly;
 }
 
 .li1,
 .li2,
 .li3 {
     display: flex;
-    height: 30%;
+    height: 0%;
     margin-top: 20px
 }
 
@@ -96,7 +96,7 @@ input[type="text"] {
     display: flex;
     border: none;
     width: 30%;
-    height: 2em;
+    height: 1em;
     border-bottom: 1.5px solid black;
     justify-content: flex-start;
     background-color: transparent;
@@ -107,6 +107,55 @@ input[type="text"] {
 }
 
 .outros {
+    width: 100%;
+    height: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.outros img {
+    width: 13px;
+    cursor: pointer;
+}
+
+.pscoativos,
+.saude,
+.acompanhamento {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.outros p {
+    margin-right: 5px;
+}
+
+.familia {
+    position: sticky;
+}
+
+.Famcard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.famform {
+    width: 95%;
+    height: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.famform input[type="text"] {
+    margin-right: 1em
 }
