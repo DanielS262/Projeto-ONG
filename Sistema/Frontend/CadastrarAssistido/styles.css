@@ -1,7 +1,7 @@
 @import url("../Global/globalHeaderMenu.css");
 section {
-    width: 100vw;
-    height: 89vh;
+    width: 100%;
+    height: 90vh;
 }
 
 .fstimg,
@@ -18,8 +18,8 @@ section {
 }
 
 .card {
-    width: 80%;
-    height: 70%;
+    width: 90%;
+    height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,12 +29,8 @@ section {
 .Assiscard {
     width: 100%;
     height: 100%;
+    display: flex;
     border-right: 1px solid black;
-}
-
-.Famcard {
-    width: 100%;
-    height: 100%
 }
 
 .sexstyle {
@@ -59,7 +55,6 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -69,9 +64,10 @@ section {
 
 .userform {
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .inputs {
@@ -108,12 +104,11 @@ input[type="text"] {
 
 .outros {
     width: 100%;
-    height: 50%;
+    height: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
     align-items: center;
+    justify-content: center;
 }
 
 .outros img {
@@ -121,21 +116,15 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.pscoativos,
-.saude,
-.acompanhamento {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-}
-
 .outros p {
     margin-right: 5px;
 }
 
 .familia {
-    position: sticky;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .Famcard {
@@ -148,14 +137,186 @@ input[type="text"] {
 }
 
 .famform {
-    width: 95%;
-    height: 48%;
+    width: 99%;
+    height: 60%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.famform input[type="text"] {
+input[type="text"] {
     margin-right: 1em
+}
+
+.acompanhamento {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acompanhamento ul {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.aclist ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.aclist input[type="text"] {
+    width: 50%;
+}
+
+.aclist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.acocontent {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.pscoativos {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.listadrogas {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.listadrogas ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.saude {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.listadoencas {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.listadoencas ul {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.listadoencas input[type="text"] {
+    width: 50%;
+}
+
+.btn {
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font: 1.2em sans-serif;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover {
+    background-color: #166B8A;
+    box-shadow: none;
+    transition: all 0.25s;
+    padding: 0 0px 0px 7px;
+}
+
+@media (max-width: 1024px) and (max-height: 1368px) {
+    .userform {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .foto {
+        width: 50px;
+    }
+    .Assiscard {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .inputs {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) and (max-width: 1000px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    .Assiscard {
+        width: 100%;
+        height: 40%;
+    }
+    header {
+        width: 100%;
+    }
+    .famform {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .inputs {
+        height: 50%;
+    }
+    .Famcard {
+        height: 100%
+    }
 }
