@@ -1,4 +1,8 @@
-@import url("../Global/globalHeaderMenu.css");
+@import url("../../Global/globalHeaderMenu.css");
+.menuJS {
+    height: 90%;
+}
+
 section {
     width: 100vw;
     height: 100vh;
@@ -14,6 +18,10 @@ section {
     justify-content: space-between;
     text-align: center;
     align-items: center;
+}
+
+.container p {
+    font-size: 2rem;
 }
 
 .infoAssistido {
