@@ -44,8 +44,8 @@ header {
 }
 
 .menuJS {
-    width: 10vw;
-    height: 90%;
+    width: 10%;
+    height: 100%;
     background-color: #e5e5e5;
     position: fixed;
 }
@@ -129,4 +129,21 @@ header {
     cursor: pointer;
     margin-left: 75%;
     margin-bottom: 10%;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    width: 20%;
+    height: 2em;
+    border-bottom: 1.5px solid black;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
 }

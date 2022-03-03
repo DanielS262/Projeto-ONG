@@ -61,3 +61,20 @@ h2 {
 .img-logout:hover {
     cursor: pointer;
 }
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    width: 20%;
+    height: 2em;
+    border-bottom: 1.5px solid black;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
