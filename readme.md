@@ -26,6 +26,11 @@
     <li>Formulário simples</li>
 </ul><br>
 
+<h2>Assistencia</h2>
+<ul>
+    <li>Cadastrar assistencia </li>
+</ul><br>
+
 <h2>Receitas e Despesas</h2>
 <p>(Em aberto)</p>
 <br>
@@ -44,3 +49,4 @@
 <p>-Menu lateral: decidir disponibilidade dos icones
 <p>-geral: definir font-family 
 <p>-Pensar na responsividade
+<p>-Pagina de Assistencia
