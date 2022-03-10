@@ -4,14 +4,21 @@ const route = express.Router()
 const funcionarioControll = require("./src/controller/funcionarioControll")
 const assistidoControll = require('./src/controller/assistidoControll')
 
+route.post('/funcionarios', funcionarioControll.login)
 route.get('/funcionarios', funcionarioControll.getAll)
-route.get('/funcionarios/:id_funcionario', funcionarioControll.getID)
+route.get('/funcionarios/:matricula_funcionario', funcionarioControll.getMatricula)
 route.post('/funcionarios/', funcionarioControll.postFuncionario)
 route.put('/funcionarios', funcionarioControll.updateFuncionario)
-route.delete('/funcionarios/:id_funcionario', funcionarioControll.deletarFuncionario)
+route.put('/funcionario', funcionarioControll.updateFotoFuncionario)
+route.delete('/funcionarios/:matricula', funcionarioControll.deletarFuncionario)
 
 route.get('/assistidos', assistidoControll.getAll)
 route.get('/assistidos/:id_assistido', assistidoControll.getID)
 route.post('/assistidos', assistidoControll.postAssistido)
+route.get('/assistido_nome/:nome_completo', assistidoControll.buscarAssistidoNomeCompleto)
+route.get('/assistido_cpf/:cpf', assistidoControll.buscarAssistidoCPF)
+route.get('/assistido_rg/:rg', assistidoControll.buscarAssistidoRG)
+route.put('/assistido_foto', assistidoControll.updateFotoAssistido)
+route.put('/assistido_foto_depois', assistidoControll.updateFotoDepoisAssistido)
 
 module.exports = route

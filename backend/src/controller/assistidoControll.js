@@ -38,6 +38,70 @@ const getID = (req, res) => {
 
 }
 
+const buscarAssistidoNomeCompleto = (req,res) => {
+
+    let  nome_completo = req.params.nome_completo
+    let stringNomeCompleto = `select * from assistido where nome_completo = '${nome_completo}';`
+
+    con.query(stringNomeCompleto, (err, result) => {
+
+        if(err === null){
+            res.json(result)
+        }
+        else{
+            res.status(400).json({err: err.message})
+        }
+    })
+
+}
+
+const buscarAssistidoCPF = (req,res) => {
+
+    let cpf = req.params.cpf 
+    let stringCPF = `select * from assistido where cpf = '${cpf}'`
+
+    console.log(cpf)
+
+    if(req.params.cpf !== undefined){
+        con.query(stringCPF, (err,result) => {
+
+            if(err === null){
+                res.json(result)
+            }else{
+                res.status(400).json({err: err.message})
+            }
+            
+        })
+    }
+    else{
+        res.status(400).end().json({"err": "informe um cpf"})
+    }
+
+}
+
+    const buscarAssistidoRG = (req,res) => {
+
+        let rg = req.params.rg
+        let stringRG = `select * from assistido where rg = '${req.params.rg}'`
+
+        if(rg !== undefined){
+
+            con.query(stringRG, (err,result) => {
+
+                if(err === null){
+                    res.json(result)
+                }
+                else{
+                    res.status(404).end().json({err: err.message})
+                }
+            })
+        }
+        else{
+            res.status(400).end().json({"err": "informe um rg"})
+        }
+
+    }
+
 const postAssistido = (req,res) => {
 
     let id_saude 
@@ -85,7 +149,7 @@ const postAssistido = (req,res) => {
         rg = null
     }
     else{
-        rq = req.body.rg
+        rg = req.body.rg
     }
 
     if(req.body.cpf === undefined){
@@ -178,9 +242,67 @@ const postAssistido = (req,res) => {
 }
 
 
+const updateFotoAssistido = (req,res) => {
+
+    let foto = req.body.foto
+    let id_assistido = req.body.id_assistido
+    let string = `update assistido set foto = '${foto}' where id_assistido = ${id_assistido}`
+
+    if(req.body.foto !== undefined && req.body.id_assistido !== undefined){
+
+        con.query(string, (err,result) => {
+            if(err === null){
+
+                res.status(400).json({...req.body})
+
+            }else{
+                res.status(400).json({err: err.message})
+            }
+        })
+    }
+    else{
+        res.json({"err": "Informe os campos de id e foto"})
+    }
+}
+
+    
+
+const updateFotoDepoisAssistido = (req, res) => {
+
+    let foto_depois = req.body.foto_depois 
+    let id_assistido = req.body.id_assistido
+
+    let string = `update assistido set foto_depois = '${foto_depois}' where id_assistido = ${id_assistido}`
+
+    if(req.body.id_assistido !== undefined && req.body.foto_depois !== undefined){
+
+        con.query(string, (err, result) => {
+
+            if(err === null){
+
+                res.json({...req.body})
+
+            }else{
+                res.status(400).json({err: err.message})
+            }
+        })
+
+    }else{
+        res.status(400).json({"err": "informe os campos id e foto"})
+    }
+
+
+}
+
+
 
 module.exports = {
     getAll,
     getID,
-    postAssistido
+    buscarAssistidoNomeCompleto,
+    buscarAssistidoCPF,
+    buscarAssistidoRG,
+    postAssistido,
+    updateFotoAssistido,
+    updateFotoDepoisAssistido
 }
